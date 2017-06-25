@@ -1,7 +1,7 @@
 FROM buildpack-deps:scm AS scm
 
 WORKDIR /scm
-RUN git clone https://github.com/ethereum/meteor-dapp-wallet/
+RUN git clone https://github.com/kvhnuke/etherwallet
 
 FROM nginx
-COPY --from=scm /scm/meteor-dapp-wallet/build /usr/share/nginx/html
+COPY --from=scm /scm/etherwallet/dist /usr/share/nginx/html
