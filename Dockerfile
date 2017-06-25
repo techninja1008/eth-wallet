@@ -1,6 +1,6 @@
 FROM buildpack-deps:scm AS scm
 
-WORKSPACE /scm
+WORKDIR /scm
 RUN git clone https://github.com/ethereum/meteor-dapp-wallet/
 
 FROM nginx
